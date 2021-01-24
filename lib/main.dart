@@ -1,6 +1,7 @@
-import 'package:components/components/listtile.dart';
+import 'package:components/components/card.dart';
 import 'package:flutter/material.dart';
 
+// import 'package:components/components/listtile.dart';
 // import 'components/container.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyListTile(),
+      home: MyCard(),
     );
   }
 }
