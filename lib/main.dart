@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'components/listview.dart';
+import 'components/gridview.dart';
 
+
+// import 'components/listview.dart';
 // import 'package:components/components/card.dart';
 // import 'package:components/components/listtile.dart';
 // import 'components/container.dart';
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyListView(),
+      home: MyGridView(),
     );
   }
 }
