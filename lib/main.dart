@@ -1,3 +1,4 @@
+import 'package:components/WidgetArgument.dart';
 import 'package:components/components/secondpage.dart';
 import 'package:flutter/material.dart';
 
@@ -41,7 +42,8 @@ class FirstPage extends StatelessWidget {
           child: Text('To Page 2'),
           onPressed: () {
             // Navegar utilizando rutas
-            Navigator.pushNamed(context, '/secondPage');
+            Navigator.pushNamed(context, '/secondPage',
+                arguments: WidgetArgument("Pasamos a la Screen 2", 2));
 
             // Una manera, sin nombre de ruta
             // Navigator.push(
