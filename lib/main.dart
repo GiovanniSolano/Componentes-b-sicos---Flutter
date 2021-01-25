@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
       //   '/': (context) => FirstPage(),
       //   '/secondPage': (context) => SecondPage()
       // },
-      home: MyTextWidget(),
+      home: MyHomePage(),
     );
   }
 }
@@ -43,7 +43,28 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: ButtonToScreenNumber2()));
+    return SafeArea(
+        child: Scaffold(
+            body: Column(
+      children: [
+        SizedBox(
+            width: MediaQuery.of(context).size.width,
+            child: Image(
+                height: 150,
+                fit: BoxFit.fitWidth,
+                filterQuality: FilterQuality.high,
+                // repeat: ImageRepeat.repeat,
+
+                image: AssetImage('assets/images/Cat03.jpg'))),
+
+        // icono
+        Icon(
+          Icons.favorite,
+          color: Colors.amber,
+          size: 88,
+        )
+      ],
+    )));
   }
 }
 
