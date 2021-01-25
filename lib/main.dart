@@ -1,7 +1,7 @@
+import 'package:components/components/secondpage.dart';
 import 'package:flutter/material.dart';
 
 import 'components/gridview.dart';
-
 
 // import 'components/listview.dart';
 // import 'package:components/components/card.dart';
@@ -22,40 +22,62 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyGridView(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => FirstPage(),
+        '/secondPage': (context) => SecondPage()
+      },
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
+class FirstPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: <Widget>[
-          Flexible(
-            flex: 2,
-            child: Container(color: Colors.red),
-          ),
-          Flexible(
-            flex: 3,
-            child: Container(color: Colors.blue),
-          ),
-          Flexible(
-            flex: 1,
-            child: Container(color: Colors.green),
-          ),
-          Flexible(
-            flex: 1,
-            child: Container(color: Colors.black),
-          ),
-        ],
+      appBar: AppBar(title: Text('First Page')),
+      body: Center(
+        child: RaisedButton(
+          child: Text('To Page 2'),
+          onPressed: () {
+            // Navegar utilizando rutas
+            Navigator.pushNamed(context, '/secondPage');
+
+            // Una manera, sin nombre de ruta
+            // Navigator.push(
+            //     context, MaterialPageRoute(builder: (context) => SecondPage()));
+          },
+        ),
       ),
     );
   }
+  // _MyHomePageState createState() => _MyHomePageState();
 }
+
+// class _MyHomePageState extends State<MyHomePage> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Column(
+//         children: <Widget>[
+//           Flexible(
+//             flex: 2,
+//             child: Container(color: Colors.red),
+//           ),
+//           Flexible(
+//             flex: 3,
+//             child: Container(color: Colors.blue),
+//           ),
+//           Flexible(
+//             flex: 1,
+//             child: Container(color: Colors.green),
+//           ),
+//           Flexible(
+//             flex: 1,
+//             child: Container(color: Colors.black),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
