@@ -43,30 +43,66 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return DefaultTabController(
+        length: 4,
         child: Scaffold(
-            body: Column(
-      children: [
-        SizedBox(
-            width: MediaQuery.of(context).size.width,
-            child: Image(
-                height: 150,
-                fit: BoxFit.fitWidth,
-                filterQuality: FilterQuality.high,
-                // repeat: ImageRepeat.repeat,
-
-                image: AssetImage('assets/images/Cat03.jpg'))),
-
-        // icono
-        Icon(
-          Icons.favorite,
-          color: Colors.amber,
-          size: 88,
-        )
-      ],
-    )));
+            appBar: AppBar(
+              title: Text("Mi demo de TabBars"),
+              bottom: TabBar(
+                tabs: [
+                  Tab(
+                    text: "Noticias",
+                  ),
+                  Tab(
+                    text: "Favoritos",
+                  ),
+                  Tab(
+                    text: "Contactos",
+                  ),
+                  Tab(
+                    text: "Otros",
+                  ),
+                ],
+              ),
+            ),
+            body: Center(
+              child: TabBarView(children: [
+                Text("Noticias"),
+                Text("Favoritos"),
+                Text("Contactos"),
+                Text("Otros"),
+              ]),
+            )));
   }
 }
+// Imagenes e iconos
+// class _MyHomePageState extends State<MyHomePage> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return SafeArea(
+//         child: Scaffold(
+//             body: Column(
+//       children: [
+//         SizedBox(
+//             width: MediaQuery.of(context).size.width,
+//             child: Image(
+//                 height: 150,
+//                 fit: BoxFit.fitWidth,
+//                 filterQuality: FilterQuality.high,
+//                 // repeat: ImageRepeat.repeat,
+
+//                 image: AssetImage('assets/images/Cat03.jpg'))),
+
+//         // icono
+//         Icon(
+//           Icons.favorite,
+//           color: Colors.amber,
+//           size: 88,
+//         )
+//       ],
+//     )));
+//   }
+// }
 
 class ButtonToScreenNumber2 extends StatelessWidget {
   @override
