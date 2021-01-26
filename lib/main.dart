@@ -12,8 +12,9 @@ import 'package:flutter/material.dart';
 // import 'package:components/components/listtile.dart';
 // / import 'components/container.dart';
 // import 'components/switch.dart';
+// import 'components/textfield.dart';
 
-import 'components/textfield.dart';
+import 'components/progressindicator.dart';
 
 void main() {
   runApp(MyApp());
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
       //   '/': (context) => FirstPage(),
       //   '/secondPage': (context) => SecondPage()
       // },
-      home: MyTextFieldWidget(),
+      home: MyProgressIndicatorWidget(),
     );
   }
 }
