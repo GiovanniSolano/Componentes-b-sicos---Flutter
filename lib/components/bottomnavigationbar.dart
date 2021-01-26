@@ -33,6 +33,25 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
+      //1 Drawer, Implementacion de Drawer, Se define un menú lateral con cabecera y lista de items
+
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+                decoration: BoxDecoration(color: Colors.blue),
+                child: Text(
+                  'Drawer cabecera',
+                  style: TextStyle(color: Colors.white, fontSize: 24),
+                )),
+            ListTile(
+                leading: Icon(Icons.account_circle), title: Text('Perfil')),
+            ListTile(leading: Icon(Icons.message), title: Text('Mensajes')),
+          ],
+        ),
+      ),
+
       //4. BottomNav: Implementación de la navegación en el bottomNavigation
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
