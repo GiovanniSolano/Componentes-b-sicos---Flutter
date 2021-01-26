@@ -1,11 +1,12 @@
-import 'package:components/WidgetArgument.dart';
 import 'package:components/components/WidgetScreen2.dart';
-import 'package:components/components/secondpage.dart';
-import 'package:components/components/text.dart';
 import 'package:flutter/material.dart';
 
-import 'components/gridview.dart';
+import 'components/bottomnavigationbar.dart';
 
+// import 'components/gridview.dart';
+// import 'package:components/WidgetArgument.dart';
+// import 'package:components/components/secondpage.dart';
+// import 'package:components/components/text.dart';
 // import 'components/listview.dart';
 // import 'package:components/components/card.dart';
 // import 'package:components/components/listtile.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
       //   '/': (context) => FirstPage(),
       //   '/secondPage': (context) => SecondPage()
       // },
-      home: MyHomePage(),
+      home: MyBottomNavigationBar(),
     );
   }
 }
