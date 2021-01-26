@@ -1,8 +1,10 @@
 import 'package:components/components/WidgetScreen2.dart';
 import 'package:flutter/material.dart';
 
-import 'components/bottomnavigationbar.dart';
+import 'components/buttons.dart';
 
+// import 'package:components/components/buttons.dart';
+// import 'components/bottomnavigationbar.dart';
 // import 'components/gridview.dart';
 // import 'package:components/WidgetArgument.dart';
 // import 'package:components/components/secondpage.dart';
@@ -31,7 +33,7 @@ class MyApp extends StatelessWidget {
       //   '/': (context) => FirstPage(),
       //   '/secondPage': (context) => SecondPage()
       // },
-      home: MyBottomNavigationBar(),
+      home: MyButtonsWidget(),
     );
   }
 }
