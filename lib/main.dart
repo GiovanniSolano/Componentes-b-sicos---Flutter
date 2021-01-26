@@ -1,19 +1,18 @@
 import 'package:components/components/WidgetScreen2.dart';
 import 'package:flutter/material.dart';
 
-import 'components/checkbox&radiobutton.dart';
-
+// import 'components/checkbox&radiobutton.dart';
 // import 'components/buttons.dart';
 // import 'package:components/components/buttons.dart';
 // import 'components/bottomnavigationbar.dart';
 // import 'components/gridview.dart';
 // import 'package:components/WidgetArgument.dart';
 // import 'package:components/components/secondpage.dart';
-// import 'package:components/components/text.dart';
-// import 'components/listview.dart';
-// import 'package:components/components/card.dart';
+// import 'package:cmport 'package:components/components/card.dart';
 // import 'package:components/components/listtile.dart';
-// import 'components/container.dart';
+// / import 'components/container.dart';
+
+import 'components/switch.dart';
 
 void main() {
   runApp(MyApp());
@@ -34,7 +33,7 @@ class MyApp extends StatelessWidget {
       //   '/': (context) => FirstPage(),
       //   '/secondPage': (context) => SecondPage()
       // },
-      home: MySelectorsWidget(),
+      home: MySwitchWidget(),
     );
   }
 }
